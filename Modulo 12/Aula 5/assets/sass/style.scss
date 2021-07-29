@@ -1,0 +1,23 @@
+nav {
+    background-color: #EEE;
+    height: 100px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            background-color: #CCC;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+    
+}
