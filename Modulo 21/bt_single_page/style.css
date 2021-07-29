@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+nav .btn {
+    border-radius: 0;
+    margin: 0 10px;
+}
+
+.jumbotron {
+    background-image: url('http://lorempixel.com/1366/768/');
+    height: calc(100vh - 64px);
+    width: 100vw;
+    max-width: unset;
+    margin: 0;
+}
+
+.jumbotron h1 {
+    text-shadow: 2px 2px #000;
+}
+
+.jumbotron p {
+    text-shadow: 1px 1px #000;
+}
