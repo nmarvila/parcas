@@ -1,0 +1,12 @@
+body {
+    background-color: #EEEEEE;
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 14px;
+}
+
+#telefone {
+    display: none;
+}
