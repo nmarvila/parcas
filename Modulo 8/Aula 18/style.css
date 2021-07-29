@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: #FF0000;
+    border: 10px solid #00FF00;
+    padding: 10px;
+    box-sizing: content-box;
+}

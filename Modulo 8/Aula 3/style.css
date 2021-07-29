@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 50px;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+nav .menu {
+    display: flex;
+    margin-right: 30px;
+}
+
+nav .menu .menuOption {
+    padding: 15px;
+}
+
+section.column {
+    background-image: url("./paisagem.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+section .title {
+    align-self: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 1px 1px #000;
+    margin: 20px;
+}
+
+section .subtitle {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    padding: 0 200px;
+}
+
+section.container {
+    flex-wrap: wrap;
+}
+
+section.container .feature {
+    margin: 0 20px 20px 20px;
+    text-align: center;
+    max-width: 30%;
+}
+
+section.container .featureTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+section.container .featureSubtitle {
+    color: #b2b2b2;
+    margin: 10px 0;
+    line-height: 30px;
+}

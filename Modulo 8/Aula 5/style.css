@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+nav.column {
+    padding: 20px 20px 0 20px;
+    border-bottom: 1px solid #dadce0;
+}
+
+nav.column section.container div#logo {
+    margin-right: 40px;
+    align-self: center;
+}
+
+nav.column section.container div#logo img {
+    width: 90px;
+    height: 30px;
+}
+
+nav.column section.container div#searchBar {
+    flex: 3;
+}
+
+nav.column section.container div#searchBar input {
+    width: 600px;
+    height: 45px;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+nav.column section.container div#searchBar input:hover {
+    box-shadow: 0px 0px 7px #bbb;
+}
+
+nav.column section.container div#rightMenu a {
+    text-decoration: none;
+    align-self: center;
+}
+
+nav.column section.container div#rightMenu a div#menu {
+    width: 30px;
+    height: 30px;
+    line-height: 6px;
+    font-weight: bold;
+    text-align: center;
+    color: #5f6368;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+nav.column section.container div#rightMenu a div#menu:hover {
+    background-color: #eff0f0;
+    border-radius: 15px;
+}
+
+nav.column section.container div#rightMenu div#perfil {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+nav.column section.container div#rightMenu div#perfil img {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+nav.column section.container div#rightMenu div#perfil:hover {
+    background-color: #eff0f0;
+    border-radius: 25px;
+}
+
+.spacing {
+    width: 140px;
+}
+
+nav.column section.container div#navbar {
+    margin-top: 30px;
+}
+
+nav.column section.container div#navbar a {
+    text-decoration: none;
+    color: #5f6368;
+    padding: 15px 15px 20px 15px;
+}
+
+nav.column section.container div#navbar a.selected {
+    color: #00f;
+    border-bottom: 5px solid #00f;
+}
+
+nav.column section.container div#navbar a.tools {
+    padding: 5px 5px 10px 5px;
+}
+
+nav.column section.container div#navbar a div.tools {
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+nav.column section.container div#navbar a div.tools:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #dadce0;
+    border-radius: 2px;
+    background-color: #f8f9fa;
+}
+
+section#results {
+    margin: 20px 0 20px 20px;
+    color: #70757a;
+}
+
+section#searchResults {
+    color: #000;
+}
+
+section#searchResults div.result {
+    padding: 20px 0 20px 0;
+}
+
+section#searchResults div.result a {
+    text-decoration: none;
+}
+
+section#searchResults div.result a:hover {
+    text-decoration: underline #1a0dab;
+}
+
+section#searchResults div.resultLink {
+    color: #000;
+    padding-bottom: 5px;
+}
+
+section#searchResults div.resultTitle {
+    padding: 5px 0 5px 0;
+    color: #1a0dab;
+    font-size: 25px;
+}
+
+section#searchResults div.resultSubtitle {
+    padding: 5px 0 5px 0;
+    line-height: 30px;
+}
+
+section#related {
+    margin-top: 30px;
+}
+
+section#related div.column div#relatedTitle {
+    color: #000;
+    font-size: 25px;
+}
+
+section#related div.column div#relatedResults {
+    margin-top: 20px;
+}
+
+section#related div.column div#relatedResults div.column a.relatedResult {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 10px;
+}
+
+section#related div.column div#relatedResults div.column a.relatedResult:hover {
+    text-decoration: underline;
+}
+
+section#related div.column div#relatedResults div.column a.relatedResult div {
+    width: 300px;
+    border-radius: 30px;
+    padding: 20px 0 20px 50px;
+    background-color: #f1f3f4;
+}
+
+section#related div.column div#relatedResults div#rightSection {
+    margin-left: 20px;
+}
+
+section#google {
+    margin-top: 50px;
+    align-self: center;
+}
+
+section#google div.top {
+    font-size: 40px;
+}
+
+section#google div.column div.bottom {
+    padding-top: 10px;
+    align-self: center;
+}
+
+section#google div.column a {
+    text-decoration: none;
+    text-align: center;
+}
+
+section#google div.column a:hover {
+    text-decoration: underline #4285f4;
+}
+
+section#google div.bottom.black {
+    color: #000;
+}
+
+section#google div.column div.top.blue {
+    align-self: center;
+}
+
+section#google div.column.arrow {
+    margin-left: 10px;
+}
+
+footer.column #region {
+    background-color: #f2f2f2;
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    color: rgba(0,0,0,.54);
+}
+
+footer.column #options {
+    background-color: #f2f2f2;
+    padding: 15px 30px;
+    justify-content: space-between;
+}
+
+footer.column #options a {
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+
+footer.column #options a:hover {
+    text-decoration: underline;
+}
+
+footer.column #options a div {
+    padding: 15px;
+}
+
+.blue,
+div.bottom.blue {
+    color: #4285f4;
+}
+
+.red {
+    color: #ea4335;
+}
+
+.yellow {
+    color: #fbbc05;
+}
+
+.green {
+    color: #34a853;
+}

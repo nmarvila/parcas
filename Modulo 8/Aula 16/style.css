@@ -1,0 +1,7 @@
+div {
+    background-color: #FF0000;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    transform: scaleY(2);
+}

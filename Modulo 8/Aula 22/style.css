@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.aviso {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    left: -45px;
+    top: -40px;
+    transform: rotate(-45deg);
+}
+
+.aviso a {
+    box-sizing: border-box;
+    align-self: center;
+    text-decoration: none;
+    background-color: #4169e1;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-family: Arial;
+    border: 1px solid #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: 2px solid #4169e1;
+}

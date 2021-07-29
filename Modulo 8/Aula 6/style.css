@@ -1,0 +1,7 @@
+input, a {
+    display: block;
+}
+
+input[name="usuario"] {
+    background-color: #FF0000;
+}
