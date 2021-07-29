@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.exemplo {
+    background-color: #00FF00;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
