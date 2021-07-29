@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    font-size: 17px;
+}
+
+h1 {
+    font-family: 'Indie Flower';
+}
+
+p {
+    color: #0000FF;
+    font-size: 20px;
+    font-family: 'Chilanka';
+}
+
+table {
+    width: 600px;
+}
+
+table thead {
+    background-color: #CCC;
+}
+
+th {
+    font-weight: normal;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #EEE;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
