@@ -9,7 +9,7 @@ nav .btn {
 }
 
 .jumbotron {
-    background-image: url('http://lorempixel.com/1366/768/');
+    background-image: url('http://lorempixel.com/1360/768/');
     height: calc(100vh - 64px);
     width: 100vw;
     max-width: unset;
@@ -22,4 +22,8 @@ nav .btn {
 
 .jumbotron p {
     text-shadow: 1px 1px #000;
+}
+
+#features, #features2 {
+    padding-top: 70px;
 }
