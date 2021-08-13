@@ -8,22 +8,98 @@ nav .btn {
     margin: 0 10px;
 }
 
-.jumbotron {
+#jumbotron1, #jumbotron3 {
     background-image: url('http://lorempixel.com/1360/768/');
-    height: calc(100vh - 64px);
+    background-repeat: no-repeat;
+    height: 100vh;
     width: 100vw;
-    max-width: unset;
+    max-width: 100vw;
     margin: 0;
 }
 
-.jumbotron h1 {
+#jumbotron1 h1 {
     text-shadow: 2px 2px #000;
 }
 
-.jumbotron p {
+#jumbotron1 p {
     text-shadow: 1px 1px #000;
 }
 
-#features, #features2 {
+#features, #features2, #features3, #features4, #jumbotron2 {
     padding-top: 70px;
+}
+
+#jumbotron2 {
+    background-image: url('http://lorempixel.com/1360/768/');
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    margin-top: 70px;
+}
+
+#jumbotron3 {
+    margin-top: 70px;
+}
+
+#jumbotron4 {
+    height: calc(50vh - 64px);
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+}
+
+#jumbotron2 h2 {
+    text-shadow: 2px 2px #999;
+}
+
+#jumbotron2 p, #jumbotron4 p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#jumbotron3 {
+    height: calc(100vh - 64px);
+}
+
+#jumbotron3 h2 {
+    text-shadow: 2px 2px #000;
+    padding-bottom: 30px;
+}
+
+#contactBanner {
+    resize: none;
+    text-align: center;
+    padding: 20px 50px 0 50px;
+}
+
+#formInputs {
+    margin-right: 15px;
+}
+
+.bg_gray {
+    background-color: rgba(200, 200, 200, 0.8) !important;
+}
+
+.t_black {
+    color: #000;
+}
+
+.t_black::placeholder {
+    color: #000;
+}
+
+hr {
+    margin: 0;
+}
+
+#footer {
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+    padding: 30px;
 }
