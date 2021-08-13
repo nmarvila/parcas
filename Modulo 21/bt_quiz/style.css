@@ -1,0 +1,11 @@
+.container {
+    height: 100vh;
+}
+
+input[type='radio'] {
+    margin-right: 20px;
+}
+
+#modelo {
+    display: none;
+}
