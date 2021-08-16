@@ -6,6 +6,6 @@ input[type='radio'] {
     margin-right: 20px;
 }
 
-#modelo {
+.hiddenBtn {
     display: none;
 }
