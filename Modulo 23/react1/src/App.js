@@ -11,18 +11,26 @@ const Input = styled.input`
 
 function App() {
 
-    const [email, setEmail] = useState('');
-    const [isLogged, setIsLogged] = useState(false);
+    const [conta, setConta] = useState(0);
+    const [gorjeta, setGorjeta] = useState(10);
 
     return (
         <>
-            <Input placeholder="Digite um e-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-            {isLogged
-                ? <button>Sair</button>
-                : <button>Fazer Login</button>
+            <h1>Calculadora de Gorjeta</h1>
+            <p>Quanto deu a conta?</p>
+            <Input type="number" min="0" value={conta} onChange={(e) => setConta(e.target.value)} />
+            <p>Quanto deu a conta?</p>
+            <Input type="number" min="0" value={gorjeta} onChange={(e) => setGorjeta(e.target.value)} />
+            <hr />
+            {conta > 0
+                ?
+                <>
+                    <p>Sub-total: R$ {conta}</p>
+                    <p>Gorjeta ({gorjeta}%): R$ {(gorjeta * 0.01 * conta).toFixed(2)}</p>
+                    <p style={{ fontWeight: 'bold' }}>Total: R$ {(Number.parseFloat(conta) + (gorjeta * 0.01 * conta)).toFixed(2)}</p>
+                </>
+                : false
             }
-
         </>
     );
 }
