@@ -12,17 +12,17 @@ const Input = styled.input`
 function App() {
 
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleButton = () => {
-        alert(email + ' - ' + password);
-    }
+    const [isLogged, setIsLogged] = useState(false);
 
     return (
         <>
             <Input placeholder="Digite um e-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input placeholder="Digite uma senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button onClick={handleButton}>Dizer</button>
+
+            {isLogged
+                ? <button>Sair</button>
+                : <button>Fazer Login</button>
+            }
+
         </>
     );
 }
