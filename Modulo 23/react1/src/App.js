@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import Modal from './components/Modal';
+import React from "react";
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
 
-    const [modalVisible, setModalVisible] = useState(false);
-
-    const handleButtonClick = () => {
-        setModalVisible(true);
-    }
-
     return (
-        <>
-            <button onClick={handleButtonClick}>Abrir Modal</button>
-
-            <Modal visible={modalVisible} setVisible={setModalVisible}>
-                <h1>Testando 1,2,3...</h1>
-            </Modal>
-        </>
+        <BrowserRouter>
+            <header>
+                <h1>Meu Site Legal</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/sobre">Sobre</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </BrowserRouter>
     );
 }
 
