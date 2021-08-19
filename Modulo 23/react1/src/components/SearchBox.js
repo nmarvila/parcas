@@ -13,17 +13,21 @@ function SearchBox(props) {
 
     const [texto, setTexto] = useState('');
 
-    useEffect(() => {
-        if (props.onChangeText) {
-            props.onChangeText(texto);
+    function handleKeyUp(e) {
+        if (e.keyCode == 13) {
+            if (props.onEnter) {
+                props.onEnter(texto);
+            }
+            setTexto('');
         }
-    }, [texto]);
+    }
 
     return (
         <InputText
             type="text"
             value={texto}
             onChange={(e) => setTexto(e.target.value)}
+            onKeyUp={handleKeyUp}
             placeholder={props.frasePadrao ?? "Digite alguma coisa"}
         />
     );

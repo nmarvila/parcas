@@ -17,8 +17,10 @@ function App() {
 
     }, []);
 
-    function handleSearchInput(novoTexto) {
-        setSearchText(novoTexto);
+    function addAction(newItem) {
+        let newList = [...list];
+        newList.push({ title: newItem, done: false });
+        setList(newList);
     }
 
     return (
@@ -26,8 +28,8 @@ function App() {
             <h1>Lista de Tarefas</h1>
 
             <SearchBox
-                frasePadrao="Faça sua busca..."
-                onChangeText={handleSearchInput}
+                frasePadrao="Adicione um item"
+                onEnter={addAction}
             />
 
             <hr />
