@@ -2,7 +2,17 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom';
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
-import Categoria from "./pages/Categoria";
+import Login from "./pages/Login";
+
+const isLogged = false;
+
+const PrivateRoute = ({ children, ...rest }) => {
+    return (
+        <Route {...rest}>
+            {isLogged ? children : <Redirect to="/login" />}
+        </Route>
+    );
+};
 
 function App() {
 
@@ -18,21 +28,6 @@ function App() {
                         <li>
                             <Link to="/sobre">Sobre</Link>
                         </li>
-                        <li>
-                            <Link to="/quem-somos">Quem Somos</Link>
-                        </li>
-                        <li>
-                            <Link to="/categoria?tipo=esportes">Esportes</Link>
-                        </li>
-                        <li>
-                            <Link to="/categoria?tipo=noticias">Notícias</Link>
-                        </li>
-                        <li>
-                            <Link to="/categoria?tipo=viagem">Viagem</Link>
-                        </li>
-                        <li>
-                            <Link to="/difahsçdkfj">URL que não existe</Link>
-                        </li>
                     </ul>
                 </nav>
             </header>
@@ -44,17 +39,13 @@ function App() {
                     <Home />
                 </Route>
 
-                <Route path="/sobre">
+                <Route path="/login">
+                    <Login />
+                </Route>
+
+                <PrivateRoute path="/sobre">
                     <Sobre />
-                </Route>
-
-                <Route path="/quem-somos">
-                    <Redirect to="/sobre" />
-                </Route>
-
-                <Route path="/categoria">
-                    <Categoria />
-                </Route>
+                </PrivateRoute>
 
                 <Route path="*">
                     <h4>Página não encontrada!</h4>
