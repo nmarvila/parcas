@@ -19,13 +19,13 @@ function App() {
                             <Link to="/sobre">Sobre</Link>
                         </li>
                         <li>
-                            <Link to="/categoria/esportes">Esportes</Link>
+                            <Link to="/categoria?tipo=esportes">Esportes</Link>
                         </li>
                         <li>
-                            <Link to="/categoria/noticias">Notícias</Link>
+                            <Link to="/categoria?tipo=noticias">Notícias</Link>
                         </li>
                         <li>
-                            <Link to="/categoria/viagem">Viagem</Link>
+                            <Link to="/categoria?tipo=viagem">Viagem</Link>
                         </li>
                     </ul>
                 </nav>
@@ -42,7 +42,7 @@ function App() {
                     <Sobre />
                 </Route>
 
-                <Route path="/categoria/:cat">
+                <Route path="/categoria">
                     <Categoria />
                 </Route>
 
