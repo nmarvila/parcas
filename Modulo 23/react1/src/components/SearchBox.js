@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const InputText = styled.input`
@@ -14,7 +14,7 @@ function SearchBox(props) {
     const [texto, setTexto] = useState('');
 
     function handleKeyUp(e) {
-        if (e.keyCode == 13) {
+        if (e.keyCode === 13) {
             if (props.onEnter) {
                 props.onEnter(texto);
             }
