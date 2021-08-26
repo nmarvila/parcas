@@ -7,6 +7,11 @@ function html() {
         .pipe(dest('public/'));
 }
 
+function htaccess() {
+    return src('src/.htaccess')
+        .pipe(dest('public/'));
+}
+
 function js() {
     return src('src/index.js')
         .pipe(named())
@@ -40,4 +45,4 @@ function js() {
         .pipe(dest('public/'));
 }
 
-exports.default = parallel(html, js);
+exports.default = parallel(html, htaccess, js);
