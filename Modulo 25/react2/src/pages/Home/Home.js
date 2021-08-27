@@ -8,7 +8,7 @@ export class Home extends Component {
             <div>
                 Página Home...
 
-                <Link to="/react2/public/sobre">Ir para página sobre</Link>
+                <Link to="/sobre">Ir para página sobre</Link>
             </div>
         );
     }
