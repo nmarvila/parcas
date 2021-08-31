@@ -1,0 +1,15 @@
+.loginarea {
+    width: 400px;
+    height: 400px;
+    background-color: #EEE;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #FF0000;
+}
