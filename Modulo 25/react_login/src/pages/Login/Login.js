@@ -25,7 +25,10 @@ export class Login extends Component {
 
                 this.setState({ errorMsg: json.error });
 
-                console.log(json);
+                if (json.error == '' && json.jwt != '') {
+                    localStorage.setItem('jwt', json.jwt);
+                    this.props.history.push('/');
+                }
 
             });
     }
