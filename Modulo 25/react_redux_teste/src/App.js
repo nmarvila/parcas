@@ -8,8 +8,8 @@ import Reducers from './Reducers';
 import Config from './Config';
 
 import { Header } from './components/Header';
+import Home from './pages/Home';
 import { Sobre } from './pages/Sobre';
-import { Home } from './pages/Home';
 
 const store = createStore(Reducers);
 

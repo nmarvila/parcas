@@ -1,5 +1,5 @@
 const initialState = {
-    email: '',
+    email: 'fulano@hotmail.com',
     pass: ''
 };
 
