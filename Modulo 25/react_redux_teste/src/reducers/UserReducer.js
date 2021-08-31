@@ -5,7 +5,13 @@ const initialState = {
 
 const UserReducer = (state = initialState, action) => {
 
-    // actions específicas ficam aqui.
+    if (action.type == 'changeEmail') {
+        return { ...state, email: action.payload.email };
+    }
+
+    if (action.type == 'changePassword') {
+        return { ...state, pass: action.payload.pass };
+    }
 
     return state;
 };
