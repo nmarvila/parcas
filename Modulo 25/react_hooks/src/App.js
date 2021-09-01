@@ -1,45 +1,31 @@
-import React, { useRef } from 'react';
+import React, { useState, useMemo } from 'react';
 import './App.css';
-import formSubmit from './formSubmit';
-import useTitleInput from './hooks/useTitleInput';
-import Contador from './Contador';
 
 const App = () => {
 
-  const [email, setEmail] = useTitleInput('teste@hotmail.com');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
-  const area = useRef();
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    formSubmit(email, setEmail);
+  const countString = (str) => {
+    console.log("Função chamada!");
+    return str.length;
   };
 
+  const countedName = useMemo(() => countString(name), [name]);
+
+  const countedEmail = useMemo(() => countString(email), [email]);
+
   return (
-    <div ref={area}>
-
-      <button onClick={() => {
-        area.current.classList.remove('maior');
-        area.current.classList.add('menor');
-      }}>Fonte Menor</button>
-
-      <button onClick={() => {
-        area.current.classList.remove('menor');
-        area.current.classList.add('maior');
-      }}>Fonte Maior</button>
-
+    <div>
       <h1>Bem Vindo(a)</h1>
 
-      <form onSubmit={handleFormSubmit}>
-        <label>Qual Seu E-mail?</label>
-        <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <label>Qual Seu Nome?</label>
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <p>{countedName} letras</p>
 
-        <input className="submit" type="submit" value="Enviar" />
-      </form>
-
-      <hr />
-
-      <Contador />
+      <label>Qual Seu E-mail?</label>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <p>{countedEmail} letras</p>
 
     </div>
   );
