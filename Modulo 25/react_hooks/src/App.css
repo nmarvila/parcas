@@ -14,3 +14,11 @@ label {
   font-size: 15px;
   background-color: #CCC;
 }
+
+.maior {
+  font-size: 30px;
+}
+
+.menor {
+  font-size: 15px;
+}
