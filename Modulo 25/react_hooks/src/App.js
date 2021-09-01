@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import './App.css';
 import formSubmit from './formSubmit';
 import useTitleInput from './hooks/useTitleInput';
+import Contador from './Contador';
 
 const App = () => {
 
@@ -35,6 +36,10 @@ const App = () => {
 
         <input className="submit" type="submit" value="Enviar" />
       </form>
+
+      <hr />
+
+      <Contador />
 
     </div>
   );
