@@ -1,20 +1,16 @@
-body {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#email {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.submit {
+  padding: 10px;
+  font-size: 15px;
   background-color: #CCC;
-}
-
-button {
-  font-size: 17px;
-  background-color: rgb(0,89,255);
-  color: #FFF;
-  padding: 10px 15px;
-  border-radius: 3px;
-  outline: 0;
-}
-
-h2 {
-  background-color: #FF0000;
 }
