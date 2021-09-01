@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import formSubmit from './formSubmit';
 
 const App = () => {
 
-  // const [valor, setValor] = useState('');
   const [email, setEmail] = useState('teste@hotmail.com');
+
+  useEffect(() => {
+    document.title = email;
+  });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
