@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const App = () => {
+export default () => {
 
-  // const [valor, setValor] = useState('');
-  const [email, setEmail] = useState('teste@hotmail.com');
+  const [msg, setMsg] = useState('Mostrar');
+  const [mostrar, setMostrar] = useState(false);
+
+  const handleButtonClick = () => {
+    setMostrar(!mostrar);
+    setMsg(mostrar ? 'Mostrar' : 'Ocultar');
+  };
 
   return (
     <div>
-
-      <h1>Bem Vindo(a)</h1>
-
-      <label for="email">Qual Seu E-mail?</label>
-      <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-      <hr />
-
-      {email}
-
+      <button onClick={handleButtonClick}>{msg}</button>
+      {mostrar &&
+        <h2>Men$4gem S3cr3t4!!! 2.0</h2>
+      }
     </div>
   );
-};
 
-export default App;
+}
