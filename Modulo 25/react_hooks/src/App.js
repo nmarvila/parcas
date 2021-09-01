@@ -7,6 +7,7 @@ const App = () => {
   const [modal, setModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [filmes, setFilmes] = useState([]);
+  const [selectedFilme, setSelectedFilme] = useState({});
 
   const getFilmes = async () => {
     setLoading(true);
@@ -27,7 +28,10 @@ const App = () => {
       <h1>Filmes Em Cartaz</h1>
 
       {modal &&
-        <Modal closeAction={setModal} />
+        <Modal closeAction={() => setModal(false)}>
+          Titulo: {selectedFilme.titulo}
+          <img src={selectedFilme.avatar} alt={selectedFilme.titulo} />
+        </Modal>
       }
 
       {loading &&
@@ -36,7 +40,10 @@ const App = () => {
 
       <section className="filmes">
         {filmes.map((filme) => (
-          <article className="filme" onClick={() => setModal(true)}>
+          <article className="filme" onClick={() => {
+            setModal(true);
+            setSelectedFilme(filme);
+          }}>
             <img src={filme.avatar} alt={filme.titulo}></img>
             <span>{filme.titulo}</span>
           </article>

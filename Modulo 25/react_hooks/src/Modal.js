@@ -1,7 +1,9 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import './Modal.css';
 
 export default (props) => {
+
+    const box = useRef();
 
     useLayoutEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -11,15 +13,17 @@ export default (props) => {
         };
     }, []);
 
-    const handleCloseModal = () => {
-        props.closeAction(false);
+    const handleWindowClick = (e) => {
+        if (!box.current.contains(e.target)) {
+            props.closeAction();
+        }
     };
 
     return (
-        <div className="modal-window">
-            <div className="modal-close" onClick={handleCloseModal}>[ fechar ]</div>
-            <div className="modal-box">
-                ...
+        <div className="modal-window" onClick={handleWindowClick}>
+            <div className="modal-close">[ fechar ]</div>
+            <div className="modal-box" ref={box}>
+                {props.children}
             </div>
         </div>
     );
