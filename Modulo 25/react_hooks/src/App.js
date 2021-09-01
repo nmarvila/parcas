@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import formSubmit from './formSubmit';
+import useTitleInput from './hooks/useTitleInput';
 
 const App = () => {
 
-  const [email, setEmail] = useState('teste@hotmail.com');
-
-  useEffect(() => {
-    document.title = email;
-  });
+  const [email, setEmail] = useTitleInput('teste@hotmail.com');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
