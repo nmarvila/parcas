@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { changeEmail } from '../../actions/UserActions';
+import { changeEmail, changePassword } from '../../actions/UserActions';
 
 class Home extends Component {
 
@@ -10,11 +10,15 @@ class Home extends Component {
         this.state = {};
 
         this.trocarEmail = this.trocarEmail.bind(this);
+        this.trocarSenha = this.trocarSenha.bind(this);
     }
 
-    trocarEmail() {
-        let email = document.getElementById("email").value;
-        this.props.changeEmail(email);
+    trocarEmail(text) {
+        this.props.changeEmail(text);
+    }
+
+    trocarSenha(text) {
+        this.props.changePassword(text);
     }
 
     render() {
@@ -23,9 +27,12 @@ class Home extends Component {
                 <h3>Página Home</h3>
 
                 <p>E-MAIL: {this.props.email}</p>
+                <p>SENHA: {this.props.senha}</p>
 
-                <input type="email" id="email" />
-                <button onClick={this.trocarEmail}>Trocar E-mail</button>
+                <input type="email" id="email" placeholder="E-mail" onChange={(e) => this.trocarEmail(e.target.value)} /><br />
+                <input type="password" id="pass" placeholder="Senha" onChange={(e) => this.trocarSenha(e.target.value)} />
+
+                <br />
 
                 <Link to="/sobre">Ir para página sobre</Link>
             </div>
@@ -40,7 +47,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapActionsToProps = {
-    changeEmail
+    changeEmail: changeEmail,
+    changePassword: changePassword
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(Home);
