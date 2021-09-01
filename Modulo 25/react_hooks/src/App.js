@@ -1,31 +1,41 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [filmes, setFilmes] = useState([]);
 
-  const countString = (str) => {
-    console.log("Função chamada!");
-    return str.length;
+  const getFilmes = async () => {
+    setLoading(true);
+
+    const res = await fetch('https://api.b7web.com.br/cinema/');
+    const json = await res.json();
+
+    setLoading(false);
+    setFilmes(json);
   };
 
-  const countedName = useMemo(() => countString(name), [name]);
-
-  const countedEmail = useMemo(() => countString(email), [email]);
+  useEffect(() => {
+    getFilmes();
+  }, []);
 
   return (
     <div>
-      <h1>Bem Vindo(a)</h1>
+      <h1>Filmes Em Cartaz</h1>
 
-      <label>Qual Seu Nome?</label>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      <p>{countedName} letras</p>
+      {loading &&
+        <p>Carregando...</p>
+      }
 
-      <label>Qual Seu E-mail?</label>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <p>{countedEmail} letras</p>
+      <section className="filmes">
+        {filmes.map((filme) => (
+          <article className="filme">
+            <img src={filme.avatar} alt={filme.titulo}></img>
+            <span>{filme.titulo}</span>
+          </article>
+        ))}
+      </section>
 
     </div>
   );

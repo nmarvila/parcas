@@ -1,26 +1,24 @@
-label {
-  display: block;
-  font-weight: bold;
+.filmes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filme {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.filme:hover {
+  background-color: #EEE;
+}
+
+.filmes img {
+  max-width: 150px;
   margin-bottom: 10px;
 }
 
-#email {
-  padding: 10px;
-  font-size: 15px;
-}
-
-.submit, button {
-  padding: 10px;
-  font-size: 15px;
-  background-color: #CCC;
-  margin: 0 5px;
-  border: 0;
-}
-
-.maior {
-  font-size: 30px;
-}
-
-.menor {
-  font-size: 15px;
+.filmes span {
+  display: block;
+  text-align: center;
 }
